@@ -56,8 +56,8 @@ function initMap() {
     });
 }
 
-const sumbit = document.getElementsByClassName("submit-btn")
-if (sumbit) {
-    alert("Thanks, we have received your message")
+
+console.log (userValue)
+function messageBtn() {
+    document.getElementsByClassName('email').value = alert("We have received your message")
 }
-console.log("this day")

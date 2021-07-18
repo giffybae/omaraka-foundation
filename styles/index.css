@@ -8,7 +8,6 @@
 
 .first-section {
     background-color: white;
-    /* padding-bottom: 1rem; */
     position: fixed;
     width: 100%;
     z-index: 3;
@@ -19,7 +18,7 @@
 }
 
 .first-section h1 {
-    font-size:2rem;
+    font-size:1.7rem;
     color: teal;
     color: whitesmoke;
     padding: 1rem 0rem 0rem 0rem;
@@ -27,7 +26,6 @@
     animation-name: logoName;
     animation-delay: -2s;
     animation-duration: 4s;
-    /* margin-left: 3rem; */
 }
 .first-section h1 a{
     text-decoration: none;
@@ -61,21 +59,22 @@
 }
 .first-section ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .first-section ul li a:hover {
-    color: rgb(3, 56, 56);
+    background-color: rgb(1, 65, 65);
+    padding: .5rem;
 }
 
 .first-section ul {
-    background: rgb(106, 177, 177);
+    background: teal;
     display: flex;
     justify-content: center;
     padding:1rem 0rem 1rem 0rem;
     background: linear-gradient(from right bottom, rgba(255,255,255,0.4), rgba(255,255,255,0.4));
 }
-.dropdown{display: none;}
-@media (max-width:800px) {
+
+@media (max-width:500px) {
     .first-section ul {
         display: none;
     }
@@ -83,20 +82,13 @@
         display: flex;
         overflow: hidden;
         padding: 0rem 1rem 0rem 0rem;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
     .first-section h1 {
         font-size: 1rem;
-        
-
     }
- 
-.show {display: block;}
 }
-@media (max-width:400px) {
-    .dropdown-content a {width: fit-content;}
-    .first-section{width: fit-content}
-}
+
 
 
 /* SLIDESHOW CONTAINER */
@@ -150,11 +142,11 @@
 .text p {
     font-size: 1.5rem;
 }
-@media (max-width:800px) {
+@media (max-width:500px) {
     .mySlides img {height: 25rem;}
     .text {
-        bottom: 1%;
-        margin-top: 1rem;
+        bottom: 10%;
+        /* margin-top: 2rem; */
     }
     .text p {font-size: 1.2rem;}
 }
@@ -202,7 +194,7 @@
 @media (max-width:760px) {
     .second-section {
         flex-direction: column;
-        padding: 0rem 3rem 0rem 3rem;
+        padding: 0rem 1rem 0rem 1rem;
     }
     .year-established {
         width: 100%;
@@ -248,7 +240,7 @@
     .third-section {
         flex-direction: column;
     }
-    .third-section img {width: 100%;padding: 0rem 3rem 0rem 3rem; border-radius: 3rem;}
+    .third-section img {width: 100%;padding: 0rem 1rem 0rem 1rem; border-radius: 3rem;}
     .third-section-content{
         width: 100% !important;
         
@@ -290,8 +282,9 @@
     50% {bottom: 10px;}
     100% {bottom: 0px;}
 }
-.know-btn:focus{
-    color: teal;
+.know-btn:hover{
+    color: white;
+    background-color: teal;
     animation-name: know;
     animation-delay: -2s;
     animation-duration: 3s;
@@ -346,18 +339,25 @@
     display: flex;
     justify-content: space-evenly;
 }
+.mission-content {margin: 1rem 1rem;}
+.mission-content p{
+    height: 10rem;
+}
 
 @media (max-width:1400px) {
-    .content-heading{width: 28rem !important};
+    .content-heading{width: 100% !important};
 }
 @media (max-width:1155px) {
     .content-heading{width: 18rem !important};
 }
-@media (max-width:800px) {
+@media (max-width:700px) {
     .mission-section {
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
+    }
+    .mission-content p {
+        height: fit-content;
     }
     #mission-pp {background-color: teal; color: whitesmoke;}
     #full-content {background-color: teal; color: whitesmoke;}
@@ -388,6 +388,7 @@
     }
 }
 
+
 .mission-content img {
     width: 20rem;
     height: 15rem;
@@ -404,7 +405,7 @@
     font-size: 1.2rem;
 }
 .content-heading {
-    padding: 3rem;
+    padding: 1rem;
     width: 35rem;
     border-radius: .5rem;
     margin-bottom: 2rem;
@@ -416,6 +417,8 @@
 
 /* LATEST PROJECTS */
 .latest-projects {
+    padding-left: 1rem;
+    padding-right: 1rem;
     display: flex;
     justify-content: space-around;
     margin-top: 5rem;
@@ -432,7 +435,10 @@
         width: 100% !important;
         
     }
-
+    .second-images img {
+        display: none;
+    }
+    
     .latest-projects-images {
         margin-top: 1rem !important;
         width: 100% !important;
@@ -440,20 +446,18 @@
     .first-images, .second-images {
         flex-direction: column;
     }
-    .first-images img {
+    
+    .first-images img{
         width:100% !important;
         padding: 1rem;
     }
-    .second-images img {
-        width:100% !important;
-        padding:1rem;
-        height: 15rem !important;
-    }
+    
 }
 
 
 .latest-project-content {
-    width: 30rem;
+    width: 40rem;
+    padding: 0rem 1rem 0rem 0rem;
     font-size: 1.2rem;
     position: relative;
 }
@@ -484,6 +488,7 @@
     margin-top: 10rem;
 }
 
+
 .first-images {
     display: flex;
 }
@@ -493,6 +498,12 @@
     height: 15rem;
     object-fit: cover;
     border-radius: 1rem;
+}
+@media (max-width: 1060px) {
+    .first-images img {
+        width: 9rem;
+    }
+    .second-images img {width: 13.5rem !important;}
 }
 
 .second-images img{
@@ -513,7 +524,7 @@
     .footer-section {
         flex-direction: column;
         justify-content: space-evenly;
-        padding-left: 3rem;
+        padding-left: 1rem;
     }
     .quick-link{text-align: left !important; margin-top: 4rem;}
     .footer-content {
@@ -656,7 +667,7 @@ textarea {
 
 .ico {display: none;}
 .topnav #myLinks {display: none; width: 15rem;}
-@media (max-width:800px){
+@media (max-width:500px){
 .topnav a {
     color: teal;
     width: 100%;
@@ -678,7 +689,7 @@ textarea {
         display: block;
         position: absolute;
         left: 0;
-        top: 4;
+        top: 0;
     }
 
     
@@ -738,11 +749,39 @@ textarea {
     width: 40%;
 }
 
-.left-blog-section img {
-    width: 30rem;
-    height: 15rem;
-    border-radius: 2rem;
-    object-fit: cover;
+.iframe-youtube-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe-youtube-container iframe {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.left-blog-section {
+    width: 40%;
+}
+
+.iframe-map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe-map-container iframe {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .blog-img {
     margin-left: 7rem;
@@ -775,7 +814,7 @@ textarea {
         width: 10rem;
         height: 10rem;
     }
-    .left-blog-section img {
+    .youtube {
         width: 17rem;
         height: 13rem;
     }
@@ -793,7 +832,7 @@ textarea {
     .left-blog-section {
         width: 100%;
     }
-    .left-blog-section img {
+    .youtube {
         width: 100%;
     }
 
